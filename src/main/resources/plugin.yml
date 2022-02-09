@@ -1,0 +1,9 @@
+name: PaintQuiz
+version: 1.0.0
+main: com.github.jhhan611.paintquiz.Plugin
+depend: [ProtocolLib]
+libraries:
+  - org.jetbrains.kotlin:kotlin-stdlib:1.5.21
+  - org.jetbrains.kotlin:kotlin-reflect:1.5.21
+  - io.github.monun:kommand:2.6.6
+api-version: 1.17
