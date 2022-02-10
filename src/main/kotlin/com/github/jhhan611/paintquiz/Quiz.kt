@@ -13,6 +13,7 @@ import org.bukkit.event.Listener
 import org.bukkit.inventory.EquipmentSlot
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.PlayerInventory
+import java.util.*
 
 object Quiz {
     var drawer : Player? = null
@@ -179,7 +180,8 @@ class ChatListener: Listener {
         Quiz.drawer ?: return
         if(e.player == Quiz.drawer) return
 
-        if (e.originalMessage() == Component.text(Quiz.answer!!)) {
+        if (e.originalMessage().toString().lowercase(Locale.getDefault()) == Component.text(Quiz.answer!!).toString()
+                .lowercase(Locale.getDefault())) {
             val onlinePlayers = Bukkit.getOnlinePlayers()
 
             for (p in onlinePlayers) {
